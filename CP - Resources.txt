@@ -1,0 +1,79 @@
+- USACO Guide
+- GFG Self Paced DSA Course
+- Aditya Verma - Stack, Binary Search
+- Galen Colin: Bitwise Operators - Topicstream
+
+----------------------------------------------------------------------
+
+Number Theory
+- CodeNCode: Number Theory Videos
+- Galen Colin: Number Theory Topicstream
+- Notes - aditional problems
+
+Trie:
+- Notes
+- Striver's Playlist
+- Quora Blog: https://threadsiiithyderabad.quora.com/Tutorial-on-Trie-and-example-problems
+
+String Hashing:
+- PAC Session - String Hashing Slides
+- CP-Algorithms string hashing page
+- Kumar Kundu String Hashing Quora
+- https://codeforces.com/blog/entry/60445
+
+Graphs and Trees:
+- Notes
+- https://codeforces.com/blog/entry/54310 (Multisource BFS)
+- cp-algo article for bfs (read complete + all problems)
+- cp-algo article for 0/1 bfs (read + all problems)
+- https://leetcode.com/discuss/general-discussion/655708/Graph-For-Beginners-Problems-or-Pattern-or-Sample-Solutions
+- https://leetcode.com/discuss/interview-question/753236/List-of-graph-algorithms-for-coding-interview
+- https://leetcode.com/discuss/study-guide/1337373/Tree-question-pattern-oror2021-placement
+
+Dynamic Programming:
+- Aditya Verma - DP Videos
+- Folder of DP-Problems
+- Galen Colin: Dynamic Programming Topicstream
+- Vplanet Riya Arora DP Problemsets
+- Leetcode DP Patterns: https://leetcode.com/discuss/general-discussion/458695/dynamic-programming-patterns%3E
+
+----------------------------------------------------------------------
+
+Problemsets:
+- *Codeforces Participated Rounds*
+- 100 Day Bootcamp (CF-V.Easy)
+- Random CF Problems from 1300-1800
+- USACO Darran Yao Book (Bronze and Silver)
+- a2oj Ladders - B, C, 1500-1599, 1600-1699, D
+- USACO Bronze, Silver and Gold Problem from 2015 Season
+- https://www.vplanetcoding.com/courses
+OR https://vplanet.contest.codeforces.com/group/hK6hgc8x94/contests
+- CSES Problem Set
+- ABC - C, D, E, F problems from round 131 onwards
+- ARC - A, B, C, D problems from round 75 onwards
+- Codeforces Div-2 Rounds from R#500 
+AT https://surya1231.github.io/Codeforces-contest/
+
+----------------------------------------------------------------------
+
+Interview Oriented:
+- Love Babbar 450 DSA Sheet
+- Interview Bit Programming Track
+- DSA -> Black Book
+- Kunal Khushwaha Github Repo
+----------------------------------------------------------------------
+
+DSA Related Courses:
+Stanford Algorithm Course - Coursera
+MIT OCW Discrete Mathematics Course
+MIT OCW Algorithms Course
+Princeton Algorithm Course - Coursera
+
+
+Always practice problems:
+---> which you can solve after some time of thinking
+---> which you miss just by one or two steps
+
+Real CP motivation:
+-> Radewoosh's Blog:
+-> -this-is-fft-'s Blog:
