@@ -12,56 +12,74 @@ using namespace std;
 #define sz(x) (int)(x).size()
 const long double PI = acos(-1);
 const int mod = 1e9 + 7, inf = 1e18;
-const int D = 1e5 + 10;
+const int D = 2e5 + 10;
 
-vector<int> adj[D];
-int val[D];
-int ans;
+void solve_test() {
+    int n, m, q;
+    cin >> n >> m >> q;
 
-int dfs(int u, int p) {
-    int lcm = 1;
-    for (int v : adj[u])
-        if (v != p and sz(adj[v]) != 1) {
-            int l1 = dfs(v, u);
-            lcm = (l1 * lcm) / __gcd(l1, lcm);
+    string a[n];
+    for (int i = 0; i < n; i++)
+        cin >> a[i];
+
+    int cnt[n + 5][m + 5];
+    memset(cnt, 0, sizeof(cnt));
+
+    int tot = 0;
+    for (int i = 0; i < n; i++)
+        tot += count(all(a[i]), '*');
+
+    int bea = 0;
+    for (int j = 0, cnt = tot; j < m; j++)
+        for (int i = 0; i < n and cnt>0; i++, cnt--)
+            bea += (a[i][j] == '*');
+
+    auto getEqNum = [&](int x, int y) {
+        return (y - 1) * n + x;
+    };
+
+    for (int qq = 1; qq <= q; qq++) {
+        int x, y; cin >> x >> y;
+        cnt[x][y]++;
+
+        if (cnt[x][y] % 2 == 0 and cnt[x][y] > 0) {
+            if (a[x - 1][y - 1] == '.') {
+                if (getEqNum(x, y) <= tot) bea--;
+                tot--;
+            }
+            else {
+                tot++;
+                if (getEqNum(x, y) <= tot) bea++;
+            }
+        }
+        else {
+            if (a[x - 1][y - 1] == '.') {
+                tot++;
+                if (getEqNum(x, y) <= tot) bea++;
+            }
+            else {
+                if (getEqNum(x, y) <= tot) bea--;
+                tot--;
+            }
         }
 
-    int cnt = 0, sum = 0, mn = inf;
-    for (int v : adj[u])
-        if (v != p)
-            mn = min(mn, val[v]), cnt++, sum += val[v];
-
-    assert(lcm != 0);
-
-    int fval = mn / lcm * lcm;
-    val[u] = fval * cnt;
-    ans += sum - val[u];
-
-    // cout << u << ' ' << lcm << ' ' << cnt << ' ' << fval << '\n';
-
-    return lcm * cnt;
+        // cout << tot - bea << '\n';
+        deb2(tot, bea);
+    }
 }
 
-// notes
 signed main() {
     fastio
-
+#ifndef ONLINE_JUDGE
     freopen("../input1.txt", "r", stdin);
     freopen("../output1.txt", "w", stdout);
+#endif
 
-    int n; cin >> n;
-    for (int i = 1; i <= n; i++)
-        cin >> val[i];
-
-    for (int i = 0; i < n - 1; i++) {
-        int x, y; cin >> x >> y;
-        adj[x].pb(y);
-        adj[y].pb(x);
+    int t = 1;
+    // cin >> t;
+    for (int i = 1; i <= t; i++) {
+        // cout << "Case #" << i << ": ";
+        solve_test();
     }
-
-    dfs(1, -1);
-
-    cout << ans << '\n';
-
     return 0;
 }

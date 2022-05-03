@@ -19,8 +19,7 @@ struct dsu {
         if (x == y) return 0;
         if (size[x] < size[y])
             swap(x, y);
-        if (size[x] == size[y])
-            size[x]++;
+        size[x] += size[y];
         par[y] = x;
         return 1;
     }
